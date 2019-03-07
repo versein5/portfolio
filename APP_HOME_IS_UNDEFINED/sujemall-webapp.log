@@ -1,0 +1,17 @@
+327  [main] INFO  o.s.t.c.s.DefaultTestContextBootstrapper - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+351  [main] INFO  o.s.t.c.s.DefaultTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@612679d6, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@11758f2a, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@e720b71, org.springframework.test.context.support.DirtiesContextTestExecutionListener@1b26f7b2, org.springframework.test.context.transaction.TransactionalTestExecutionListener@491cc5c9, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@74ad1f1f]
+442  [main] INFO  o.s.b.f.xml.XmlBeanDefinitionReader - Loading XML bean definitions from URL [file:src/main/webapp/WEB-INF/spring/datasource.xml]
+597  [main] INFO  o.s.b.f.xml.XmlBeanDefinitionReader - Loading XML bean definitions from URL [file:src/main/webapp/WEB-INF/spring/root-context.xml]
+734  [main] INFO  o.s.c.s.GenericApplicationContext - Refreshing org.springframework.context.support.GenericApplicationContext@10d59286: startup date [Thu Mar 07 14:44:10 KST 2019]; root of context hierarchy
+1122 [main] INFO  o.s.j.d.DriverManagerDataSource - Loaded JDBC driver: com.mysql.cj.jdbc.Driver
+1281 [main] DEBUG o.apache.ibatis.logging.LogFactory - Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+1386 [main] DEBUG o.m.spring.SqlSessionFactoryBean - Parsed configuration file: 'class path resource [mybatis-config.xml]'
+1482 [main] DEBUG o.m.spring.SqlSessionFactoryBean - Parsed mapper file: 'class path resource [mappers/article-mapper.xml]'
+1839 [main] DEBUG org.mybatis.spring.SqlSessionUtils - Creating a new SqlSession
+1845 [main] DEBUG org.mybatis.spring.SqlSessionUtils - SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@28e8dde3] was not registered for synchronization because synchronization is not active
+2404 [main] DEBUG o.m.s.t.SpringManagedTransaction - JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@3b9d6699] will not be managed by Spring
+2408 [main] DEBUG m.article-mapper.selectArticleById - ==>  Preparing: select article_id as articleId, author, title, content from article where article_id = ? 
+2436 [main] DEBUG m.article-mapper.selectArticleById - ==> Parameters: 2(String)
+2481 [main] DEBUG m.article-mapper.selectArticleById - <==      Total: 1
+2483 [main] DEBUG org.mybatis.spring.SqlSessionUtils - Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@28e8dde3]
+2489 [Thread-1] INFO  o.s.c.s.GenericApplicationContext - Closing org.springframework.context.support.GenericApplicationContext@10d59286: startup date [Thu Mar 07 14:44:10 KST 2019]; root of context hierarchy
