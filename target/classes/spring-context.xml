@@ -12,6 +12,8 @@
 <property name="anotherDAO" ref="anotherDAO"></property>
 </bean>
 
+
+
 <bean id="helloDAO" class="kr.co.acomp.hello.dao.HelloDAO"></bean>
 <bean id="anotherDAO" class="kr.co.acomp.hello.dao.AnotherDAO"></bean>
 

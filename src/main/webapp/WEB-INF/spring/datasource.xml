@@ -26,7 +26,7 @@
 			value="classpath:mybatis-config.xml"></property>
 		<property name="mapperLocations">
 			<list>
-				<value>classpath:mappers/article-mapper.xml</value>
+				<value>classpath:mappers/*.xml</value>
 			</list>
 		</property>
 	</bean>

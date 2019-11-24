@@ -15,24 +15,35 @@
 
 	<mvc:annotation-driven></mvc:annotation-driven>
 
-	<mvc:resources location="/WEB-INF/resources/"
-		mapping="/resources/**"></mvc:resources>
-
+	<mvc:resources location="/WEB-INF/resources/" mapping="/resources/**"></mvc:resources>
 	<bean id="multipartResolver"
 		class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
 		<property name="maxUploadSize" value="104857600"></property>
 		<property name="defaultEncoding" value="UTF-8"></property>
 	</bean>
+	
+<!-- 	<mvc:view-controller path="/login" view-name="login" /> -->
+<!-- 	주소창에 도메인/login 입력하면 login.jsp로 이동 //Controller 없이 jsp에 바로 매핑하기 -->
+
 	<bean id="viewResolver"
 		class="org.springframework.web.servlet.view.InternalResourceViewResolver">
 		<property name="prefix" value="/WEB-INF/views/"></property>
 		<property name="suffix" value=".jsp"></property>
 	</bean>
-
+	
+<!-- 	<bean id="urlFilenameViewController"        -->
+<!--                 class="org.springframework.web.servlet.mvc.UrlFilenameViewController"  />  -->
+<!--  <bean id="urlMapping2" class="org.springframework.web.servlet.handler.SimpleUrlHandlerMapping"> <property name="mappings">  -->
+<!--  <value>/**/*.do=urlFilenameViewController</value> </property> <property name="order" value="2" /> </bean> -->
+ 	
+<!--  	<bean name="join.do" class="org.springframework.web.servlet.mvc.ParameterizableViewController"> -->
+<!--         <property name="viewName" value="${pageContext.request.contextPath}/join.jsp"></property> -->
+<!-- 	</bean> -->
+	
 	<mvc:interceptors>
 		<mvc:interceptor>
-			<!-- bbs에서오는 모든 요청 -->
-			<mvc:mapping path="/bbs/**/" />
+			<!-- BestText에서오는 모든 요청 -->
+			<mvc:mapping path="/BestText/**/" />
 			<bean id="measuringInterceptor"
 				class="kr.co.acomp.hello.interceptor.MeasuringInterceptor"></bean>
 		</mvc:interceptor>
